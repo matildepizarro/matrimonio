@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Matrimonio Deborah &amp; Matilde — 04/02/2026</title>
+<link rel="preload" href="assets/banner.webp" as="image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#d95f6e;--accent-2:#f7a7c4;--muted:#f6f2f4;--card-bg:rgba(255,255,255,0.88);--text:#2b2b2b;--sub:#6b6b6b;--radius:16px;--max-width:1100px;--ff-heading:'Playfair Display',serif;--ff-body:'Poppins',system-ui,Arial,sans-serif}
+html,body{height:100%;margin:0}
+body{font-family:var(--ff-body);color:var(--text);background-color:#f7e6ea;
+  background-image:url('assets/bg-pattern.webp');
+  background-repeat:repeat;background-size:220px 220px;background-attachment:fixed;
+  display:flex;align-items:flex-start;justify-content:center;padding:48px 20px 80px;
+}
+.card{width:100%;max-width:var(--max-width);background:linear-gradient(180deg,var(--card-bg),rgba(255,255,255,0.96));border-radius:calc(var(--radius) + 6px);box-shadow:0 24px 50px rgba(33,28,28,0.12);padding:28px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.6);overflow:hidden;animation:fadeIn .6s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+header{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.banner{width:150px;height:150px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.08);animation:bannerPop .9s cubic-bezier(.2,.9,.2,1)}
+@keyframes bannerPop{0%{transform:translateY(8px) scale(.98);opacity:0}60%{transform:scale(1.02)}100%{transform:none;opacity:1}}
+.title-wrap{display:flex;flex-direction:column}
+.title{font-family:var(--ff-heading);font-size:30px;color:#6b2f36;margin:0}
+.lead{font-size:14px;color:var(--sub);margin-top:6px}
+.layout{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:12px}
+@media (max-width:940px){.layout{grid-template-columns:1fr} .banner{width:110px;height:110px} .title{font-size:22px}}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
+.tab-btn,.pill-btn{display:inline-flex;align-items:center;justify-content:center;min-width:110px;height:56px;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;color:#111;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));box-shadow:0 6px 18px rgba(34,34,34,0.06);border:1px solid rgba(0,0,0,0.06);transition:transform .18s,box-shadow .18s,background .18s}
+.tab-btn:hover,.pill-btn:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 18px 36px rgba(34,34,34,0.12);background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.tab-btn:focus,.pill-btn:focus{outline:3px solid rgba(217,95,110,0.16);outline-offset:3px}
+.tab-btn[aria-selected='true'],.pill-btn[aria-selected='true']{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 18px 36px rgba(217,95,110,0.12)}
+
+.panel{display:none}.panel.active{display:block}
+.box{background:var(--muted);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
+.heading-deco{height:6px;width:56px;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:8px 0 14px}
+
+h2,h3{font-family:var(--ff-heading);margin:0 0 10px 0}
+h2{font-size:20px;color:#6b2f36}h3{font-size:16px;color:#6b2f36}
+p{margin:0 0 10px 0}
+
+dl{display:grid;grid-template-columns:140px 1fr;gap:10px 16px;align-items:start}
+dt{font-weight:700;color:#4b3b3b}dd{margin:0;color:var(--text)}
+
+.pal-img{width:100%;border-radius:10px;border:1px solid rgba(0,0,0,0.04);object-fit:cover;display:block}
+
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn{text-decoration:none;min-width:120px;height:52px}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#f18fb0);color:white;box-shadow:0 8px 24px rgba(217,95,110,0.14)}
+.btn-primary:hover{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 18px 40px rgba(217,95,110,0.16);transform:translateY(-6px)}
+.btn-primary.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+.btn-large{padding:14px 20px;font-size:16px;border-radius:14px}
+.btn-ghost{background:transparent;border:1px solid rgba(34,34,34,0.06);color:var(--sub)}
+
+.map-embed{width:100%;height:160px;border-radius:10px;border:0}
+.gift-details{font-weight:600}
+
+footer{margin-top:18px;font-size:13px;color:var(--sub);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+  <div class="card" role="main" aria-labelledby="main-title">
+    <header>
+      <div class="banner" aria-hidden="true">
+        <img src="assets/banner.webp" alt="Banner Deborah &amp; Matilde" width="150" height="150" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div class="title-wrap">
+        <h1 id="main-title" class="title">Matrimonio Deborah &amp; Matilde</h1>
+        <div class="lead">04 de febrero del 2026</div>
+      </div>
+      <div style="margin-left:auto;text-align:right">
+        <div style="font-weight:700;color:var(--accent)">¡Te esperamos!</div>
+        <div style="font-size:13px;color:var(--sub);margin-top:6px">Recuerda confirmar tu asistencia y mirar los codigos de vestimenta</div>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones del evento">
+      <button class="tab-btn" role="tab" aria-selected="true" data-tab="details">Detalles</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="dress">Vestimenta</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="confirm">Confirmar</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="gifts">Deposita tu regalo</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="party">Fiesta</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="map">Mapa</button>
+    </nav>
+
+    <div class="layout">
+      <main>
+        <section id="details" class="panel active" role="tabpanel">
+          <div class="box">
+            <h2>Detalles del evento</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p class="lead">Gracias por acompañarnos en este día tan especial. Aquí encontrarás la información práctica y enlaces importantes.</p>
+            <dl style="margin-top:12px">
+              <dt>Lugar</dt>
+              <dd>Restaurante Nogaro — Av. Perú 100, Viña del Mar — 14:00 hrs</dd>
+              <dt>Concepto</dt>
+              <dd>Almuerzo de verano con familia y amigues — Semiformal veraniego relajado</dd>
+              <dt>Vestimenta</dt>
+              <dd>Semiformal — Colores pasteles. <strong>PROHIBIDO USAR BLANCO O NEGRO (INCLUYE A HOMBRES)</strong></dd>
+              <dt>Confirmar</dt>
+              <dd>Selecciona tu comida y confirma tu asistencia en el enlace de confirmación.</dd>
+            </dl>
+
+            <div class="cta-row">
+              <a class="pill-btn btn btn-primary btn-large pulse" href="https://docs.google.com/spreadsheets/d/1sliH89xQxv42Siw27ZzSlMzmBn7cwW4n_YOHnZ7L4qQ/edit?usp=drive_web&ouid=103930984200010742815" target="_blank" rel="noopener">Confirmar asistencia</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="dress" class="panel" role="tabpanel" aria-hidden="true">
+          <div class="box">
+            <h2>Vestimenta — Código y ejemplos</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p>Semiformal veraniego, relajado. <strong>PROHIBIDO blanco y negro (para hombres y mujeres)</strong></p>
+
+            <div style="margin-top:16px;display:flex;flex-direction:column;align-items:center;gap:12px">
+              <div style="width:240px;max-width:100%;text-align:center;font-weight:700;color:var(--sub)">Paleta de colores</div>
+              <img src="assets/paleta.webp" alt="Paleta de colores" loading="lazy" style="width:220px;max-width:100%;border-radius:12px;border:6px solid rgba(255,255,255,0.6);box-shadow:0 10px 30px rgba(0,0,0,0.08)">
+              <a class="pill-btn btn btn-primary btn-large btn-animated pulse" href="https://drive.google.com/drive/folders/1djanIWfuNuO6g6F3eNZddpw7mZ06gkC5?usp=drive_link" target="_blank" rel="noopener">Ver ejemplos de vestimenta</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="confirm" class="panel" role="tabpanel" aria-hidden="true">
+          <div class="box">
+            <h2>Confirmar asistencia</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p>Al pulsar el botón de confirmación serás redirigidx al documento donde podrás elegir tu plato y validar tu asistencia.</p>
+            <div style="margin-top:12px" class="cta-row">
+              <a class="pill-btn btn btn-primary btn-large pulse" href="https://docs.google.com/spreadsheets/d/1sliH89xQxv42Siw27ZzSlMzmBn7cwW4n_YOHnZ7L4qQ/edit?usp=drive_web&ouid=103930984200010742815" target="_blank" rel="noopener">Ir a confirmar</a>
+              <a class="pill-btn btn btn-ghost" href="mailto:matildepizarrotoro@gmail.com">Escribir a los anfitriones</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="gifts" class="panel" role="tabpanel" aria-hidden="true">
+          <div class="box">
+            <h2>Deposita tu regalo</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p class="muted">Tu regalo es una contribución económica, estos son los datos.</p>
+            <div style="margin-top:10px" class="gift-details">
+              Matilde Gregoria Pizarro Toro<br>
+              RUT: 194877641<br>
+              Mercado Pago — Cuenta Vista<br>
+              Número de cuenta: <strong>1086878479</strong><br>
+              <a class="pill-btn btn btn-ghost" href="mailto:matildepizarrotoro@gmail.com">matildepizarrotoro@gmail.com</a>
+            </div>
+            <div style="margin-top:12px">
+              <img src="assets/gift-icon.svg" alt="Datos regalo" class="pal-img" loading="lazy">
+            </div>
+          </div>
+        </section>
+
+        <section id="party" class="panel" role="tabpanel" aria-hidden="true">
+          <div class="box">
+            <h2>Fiesta (+18)</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p>La información completa de la fiesta y el acceso será anunciada próximamente. Este espacio se actualizará con horarios y localización.</p>
+          </div>
+        </section>
+
+        <section id="map" class="panel" role="tabpanel" aria-hidden="true">
+          <div class="box">
+            <h2>Mapa</h2>
+            <div class="heading-deco" aria-hidden="true"></div>
+            <p>Restaurante Nogaro — Av. Perú 100, Viña del Mar</p>
+            <div style="margin-top:10px">
+              <iframe class="map-embed" src="https://www.google.com/maps?q=Restaurante+Nogaro+Av+Peru+100+Vina+del+Mar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="box">
+          <h3>Datos rápidos</h3>
+          <div class="heading-deco" aria-hidden="true"></div>
+          <p style="margin-bottom:8px"><strong>Fecha:</strong> 04/02/2026 • 14:00 hrs</p>
+          <p style="margin-bottom:8px"><strong>Lugar:</strong> Restaurante Nogaro — Av. Perú 100, Viña del Mar</p>
+
+          <hr style="border:none;height:1px;background:#efe6ea;margin:12px 0">
+
+          <div style="height:14px"></div>
+
+        <div class="box">
+          <h3>Contacto</h3>
+          <div style="margin-top:8px;color:var(--sub)">
+            Si tienes dudas sobre el vestuario, accesibilidad o regalos, escríbenos o llámanos:
+            <ul style="margin-top:10px;margin-left:18px;color:var(--text)">
+              <li><a class="pill-btn btn btn-ghost" href="mailto:matildepizarrotoro@gmail.com">matildepizarrotoro@gmail.com</a></li>
+              <li><a class="pill-btn btn btn-ghost" href="mailto:debydrolett@gmail.com">debydrolett@gmail.com</a></li>
+              <li>Tel: +56 9 7171 0225</li>
+              <li>Tel: +56 9 8158 0471</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© Deborah &amp; Matilde — 2026</div>
+      <div style="color:var(--sub)">Esta es una invitación digital</div>
+    </footer>
+
+  </div>
+
+  <!-- Audio en archivo externo, sin precargar hasta que el usuario interactúe -->
+  <audio id="bgAudio" preload="none" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio embebido.
+  </audio>
+  <div id="audioOverlay" style="position:fixed;left:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:10px 12px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,0.12);cursor:pointer;font-weight:700">🔊 Reproducir música</div>
+
+<script>
+// Tabs logic (accessible)
+const tabs = document.querySelectorAll('[role="tab"]');
+const panels = document.querySelectorAll('[role="tabpanel"]');
+function activateTab(tab){
+  tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+  tab.setAttribute('aria-selected','true');
+  panels.forEach(p=>{ if(p.id===tab.dataset.tab){ p.classList.add('active'); p.removeAttribute('aria-hidden') } else { p.classList.remove('active'); p.setAttribute('aria-hidden','true') } });
+  tab.focus();
+}
+tabs.forEach(tab=>{ tab.addEventListener('click', ()=>activateTab(tab)); tab.addEventListener('keydown', (e)=>{ const idx = Array.from(tabs).indexOf(tab); if(e.key==='ArrowRight'){ tabs[(idx+1)%tabs.length].focus(); } if(e.key==='ArrowLeft'){ tabs[(idx-1+tabs.length)%tabs.length].focus(); } }); });
+activateTab(tabs[0]);
+
+// Audio: intenta reproducir al primer gesto del usuario (los navegadores bloquean autoplay con sonido)
+const audio = document.getElementById('bgAudio');
+const overlay = document.getElementById('audioOverlay');
+function tryPlay(){ audio.play().then(()=>{ overlay.style.display='none'; }).catch(()=>{ overlay.style.display='block'; }); }
+window.addEventListener('load', tryPlay);
+overlay.addEventListener('click', ()=>{ audio.play().then(()=>{ overlay.style.display='none'; }).catch(()=>{ alert('No se pudo reproducir el audio automáticamente. Por favor pulsa el botón o revisa ajustes del navegador.'); }); });
+</script>
+</body>
+</html>
