@@ -76,18 +76,21 @@
     }, 2500);
   });
 
-  /* ---------- Photo tabs (Día / Noche) ---------- */
+  /* ---------- Photo / Music tabs (supports multiple independent tab groups) ---------- */
   safe(function(){
-    var tabs = toEl(document.querySelectorAll('.photo-tab'));
-    if (!tabs.length) return;
-    tabs.forEach(function(tab){
-      tab.addEventListener('click', function(){
-        tabs.forEach(function(t){
-          var isActive = t === tab;
-          t.classList.toggle('active', isActive);
-          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-          var panel = document.getElementById(t.getAttribute('data-panel'));
-          if (panel){ if (isActive) panel.removeAttribute('hidden'); else panel.setAttribute('hidden',''); }
+    var groups = toEl(document.querySelectorAll('[role="tablist"]'));
+    groups.forEach(function(group){
+      var tabs = toEl(group.querySelectorAll('.photo-tab'));
+      if (!tabs.length) return;
+      tabs.forEach(function(tab){
+        tab.addEventListener('click', function(){
+          tabs.forEach(function(t){
+            var isActive = t === tab;
+            t.classList.toggle('active', isActive);
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            var panel = document.getElementById(t.getAttribute('data-panel'));
+            if (panel){ if (isActive) panel.removeAttribute('hidden'); else panel.setAttribute('hidden',''); }
+          });
         });
       });
     });
