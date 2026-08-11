@@ -96,28 +96,38 @@
     });
   });
 
-  /* ---------- Countdown ---------- */
+  /* ---------- Married-time counter (years / months / days since the wedding) ---------- */
   safe(function(){
+    var elY = document.getElementById('cd-years');
+    var elMo = document.getElementById('cd-months');
     var elD = document.getElementById('cd-days');
-    var elH = document.getElementById('cd-hours');
-    var elM = document.getElementById('cd-min');
-    var elS = document.getElementById('cd-sec');
     if (!elD) return;
-    var target = new Date('2026-02-04T14:00:00-03:00').getTime();
+    var weddingDate = new Date('2026-02-04T14:00:00-03:00');
     function pad(n){ n = String(n); return n.length < 2 ? '0' + n : n; }
     function tick(){
-      var diff = target - Date.now();
-      if (diff <= 0){
-        elD.textContent = elH.textContent = elM.textContent = elS.textContent = '00';
+      var now = new Date();
+      if (now < weddingDate){
+        elY.textContent = elMo.textContent = elD.textContent = '00';
         return;
       }
-      elD.textContent = pad(Math.floor(diff / 86400000));
-      elH.textContent = pad(Math.floor((diff % 86400000) / 3600000));
-      elM.textContent = pad(Math.floor((diff % 3600000) / 60000));
-      elS.textContent = pad(Math.floor((diff % 60000) / 1000));
+      var years = now.getFullYear() - weddingDate.getFullYear();
+      var months = now.getMonth() - weddingDate.getMonth();
+      var days = now.getDate() - weddingDate.getDate();
+      if (days < 0){
+        months -= 1;
+        var prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        days += prevMonth;
+      }
+      if (months < 0){
+        years -= 1;
+        months += 12;
+      }
+      elY.textContent = pad(years);
+      elMo.textContent = pad(months);
+      elD.textContent = pad(days);
     }
     tick();
-    setInterval(tick, 1000);
+    setInterval(tick, 60000);
   });
 
   /* ---------- Toast ---------- */
